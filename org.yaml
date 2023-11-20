@@ -1,74 +1,25 @@
----
-# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-user
-apiVersion: backstage.io/v1alpha1
-kind: User
-metadata:
-  name: Nicolas Cappello
-spec:
-  memberOf: [ikki-league]
----
-# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-user
-apiVersion: backstage.io/v1alpha1
-kind: User
-metadata:
-  name: Jean-Damien Blanc
-spec:
-  memberOf: [ikki-league]
----
-# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-user
-apiVersion: backstage.io/v1alpha1
-kind: User
-metadata:
-  name: Ludovic Blaas
-spec:
-  memberOf: [ikki-league]
----
-# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-user
-apiVersion: backstage.io/v1alpha1
-kind: User
-metadata:
-  name: Mickael Akbaraly
-spec:
-  memberOf: [ikki-league]
----
-# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-user
-apiVersion: backstage.io/v1alpha1
-kind: User
-metadata:
-  name: Julien Rey
-spec:
-  memberOf: [ikki-league]
----
-# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-user
-apiVersion: backstage.io/v1alpha1
-kind: User
-metadata:
-  name: Fabien TRAVAGLIA
-spec:
-  memberOf: [ikki-league]
----
-# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-user
-apiVersion: backstage.io/v1alpha1
-kind: User
-metadata:
-  name: guest
-spec:
-  memberOf: [guests]
----
-# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-group
 apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
-  name: guests
+  name: IKKI League
+  description: The IKKI League organization
+  links:
+    - url: https://ikki-league.com
+      title: Website
 spec:
-  type: team
-  children: []
+  type: organization
+  profile:
+    displayName: IKKI League
+    email: @example.com
+    picture: https://avatars.dicebear.com/api/identicon/info@example.com.svg?background=%23fff&margin=25
+  children: [infrastructure]
 ---
-# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-group
 apiVersion: backstage.io/v1alpha1
-kind: Group
+kind: Location
 metadata:
-  name: ikki-league
+  name: example-groups
+  description: A collection of all Backstage example Groups
 spec:
-  type: team
-  children: []
+  targets:
+    - ./-squad-athena-group.yaml
+    ---
