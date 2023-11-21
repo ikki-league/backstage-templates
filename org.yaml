@@ -21,4 +21,4 @@ metadata:
   description: A collection of all Backstage IKKI Groups
 spec:
   targets:
-    - ./-squad-athena-group.yaml
+    - ./squad-athena-group.yaml
