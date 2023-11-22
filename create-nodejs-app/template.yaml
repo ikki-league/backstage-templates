@@ -18,6 +18,7 @@ spec:
     - title: Fill in some steps
       required:
         - name
+        - owner
       properties:
         name:
           title: Name
@@ -26,6 +27,15 @@ spec:
           ui:autofocus: true
           ui:options:
             rows: 5
+          owner:
+          title: Owner
+          type: string
+          description: Owner of the component
+          ui:field: OwnerPicker
+          ui:options:
+            allowedKinds:
+              - Group
+        
     - title: Choose a location
       required:
         - repoUrl
