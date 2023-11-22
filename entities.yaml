@@ -33,7 +33,7 @@ spec:
   type: rest
   lifecycle: experimental
   owner: ikki-league
-  system: communication-tools
+  system: internal
   providesApis: [ikki-rest-api]
   definition: |
     // Nodejs code example for call this API

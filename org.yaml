@@ -12,6 +12,7 @@ spec:
     displayName: IKKI League
     email: ikki@ikki-league.com
     picture: https://avatars.dicebear.com/api/identicon/info@example.com.svg?background=%23fff&margin=25
+  children: [ikki-groups]
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Location
