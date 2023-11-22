@@ -15,21 +15,44 @@ spec:
 apiVersion: backstage.io/v1alpha1
 kind: User
 metadata:
-  name: nicolas.cappello
+  name: ludovic.blaas
 spec:
   profile:
     # Intentional no displayName for testing
-    email: ncappello@ikki.fr
+    email: lblaas@ikki.fr
     picture: https://avatars.dicebear.com/api/avataaars/breanna-davison@example.com.svg?background=%23fff
   memberOf: [squad-athena]
 ---
 apiVersion: backstage.io/v1alpha1
 kind: User
 metadata:
-  name: jean.damien.blanc
+  name: fabien.travaglia
 spec:
   profile:
     # Intentional no displayName for testing
-    email: jdblanc@ikki.fr
+    email: ftravaglia@ikki.fr
+    picture: https://avatars.dicebear.com/api/avataaars/breanna-davison@example.com.svg?background=%23fff
+  memberOf: [squad-athena]
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-user
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: Julien.rey
+spec:
+  profile:
+    # Intentional no displayName for testing
+    email: jrey@ikki.fr
+    picture: https://avatars.dicebear.com/api/avataaars/breanna-davison@example.com.svg?background=%23fff
+  memberOf: [squad-athena]
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: mickael.akbaraly
+spec:
+  profile:
+    # Intentional no displayName for testing
+    email: makbaraly@ikki.fr
     picture: https://avatars.dicebear.com/api/avataaars/breanna-davison@example.com.svg?background=%23fff
   memberOf: [squad-athena]
