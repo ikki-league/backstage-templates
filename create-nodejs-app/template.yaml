@@ -6,7 +6,7 @@ metadata:
   title: Node.js Template
   description: Create a new NodeJS App
 spec:
-  owner: ftravaglia@ikki.fr
+  owner: ikki-league
   type: service
 
   # These parameters are used to generate the input form in the frontend, and are

@@ -11,31 +11,71 @@ spec:
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: example-website
+  name: website
+  title: IKKI League Website
+  description: The IKKI League Website
+  links:
+    - url: https://ikki.fr
+      title: IKKI League
 spec:
   type: website
   lifecycle: experimental
   owner: ikki-league
   system: examples
-  providesApis: [example-grpc-api]
+  consumesApis: [ikki-rest-api]
 ---
 # https://backstage.io/docs/features/software-catalog/descriptor-format#kind-api
 apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
-  name: example-grpc-api
+  name: ikki-rest-api
 spec:
-  type: grpc
+  type: rest
   lifecycle: experimental
   owner: ikki-league
   system: examples
+  providesApis: [ikki-rest-api]
   definition: |
-    syntax = "proto3";
+    // Nodejs code example for call this API
+    syntax = "nodejs";
 
-    service Exampler {
-      rpc Example (ExampleMessage) returns (ExampleMessage) {};
-    }
+    const http = require('http');
 
-    message ExampleMessage {
-      string example = 1;
+    const options = {
+      hostname: 'jsonplaceholder.typicode.com',
+      path: '/posts',
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
     };
+
+    const getPosts = () => {
+      let data = '';
+
+      const request = http.request(options, (response) => {
+        // Set the encoding, so we don't get log to the console a bunch of gibberish binary data
+        response.setEncoding('utf8');
+
+        // As data starts streaming in, add each chunk to "data"
+        response.on('data', (chunk) => {
+          data += chunk;
+        });
+
+        // The whole response has been received. Print out the result.
+        response.on('end', () => {
+          console.log(data);
+        });
+      });
+
+      // Log errors if any occur
+      request.on('error', (error) => {
+        console.error(error);
+      });
+
+      // End the request
+      request.end();
+    };
+
+    getPosts();
+
