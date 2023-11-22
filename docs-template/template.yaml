@@ -1,30 +1,33 @@
 apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
-  name: react-app-template
-  title: React App Template
-  description: Create a new CRA website project
+  name: docs-template
+  title: Documentation Template
+  description: Create a new standalone documentation project
   tags:
-    - react
-    - com
+    - recommended
+    - techdocs
+    - mkdocs
 spec:
-  owner: ikki-league
-  type: website
+  owner: backstage/techdocs-core
+  type: documentation
+
   parameters:
-    - title: Provide some simple information
+    - title: Fill in some steps
       required:
-        - component_id
-        - owner
+        - name
+        - description
       properties:
-        component_id:
+        name:
           title: Name
           type: string
           description: Unique name of the component
           ui:field: EntityNamePicker
+          ui:autofocus: true
         description:
           title: Description
           type: string
-          description: Help others understand what this website is for.
+          description: A description for the component
         owner:
           title: Owner
           type: string
@@ -44,16 +47,18 @@ spec:
           ui:options:
             allowedHosts:
               - github.com
+
+  # This template is meant to be used on top of an existing template.
+  # By adding the following and fetching from an absolute URL you can
+  # add in the docs template
   steps:
-    - id: template
-      name: Fetch content + Template
+    - id: fetch
+      name: Template Docs Skeleton
       action: fetch:template
       input:
-        url: ./content
-        copyWithoutRender:
-          - .github/workflows/*
+        url: ./skeleton
         values:
-          component_id: ${{ parameters.component_id }}
+          name: ${{ parameters.name }}
           description: ${{ parameters.description }}
           destination: ${{ parameters.repoUrl | parseRepoUrl }}
           owner: ${{ parameters.owner }}
@@ -62,9 +67,8 @@ spec:
       name: Publish
       action: publish:github
       input:
-        allowedHosts:
-          - github.com
-        description: This is ${{ parameters.component_id }}
+        allowedHosts: ["github.com"]
+        description: This is ${{ parameters.name }}
         repoUrl: ${{ parameters.repoUrl }}
 
     - id: register

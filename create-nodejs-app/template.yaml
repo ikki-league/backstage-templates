@@ -5,6 +5,9 @@ metadata:
   name: create-nodejs-app-template
   title: Node.js Template
   description: Create a new NodeJS App
+    tags:
+    - nodejs
+    - com
 spec:
   owner: ikki-league
   type: service
