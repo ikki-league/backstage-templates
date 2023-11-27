@@ -32,7 +32,7 @@ metadata:
 spec:
   type: rest
   lifecycle: experimental
-  owner: ikki-league
+  owner: team-tech
   system: internal
   providesApis: [ikki-rest-api]
   definition: |
