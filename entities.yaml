@@ -6,22 +6,4 @@ metadata:
   name: communication-tools
 spec:
   owner: ikki-league
----
-# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-component
-apiVersion: backstage.io/v1alpha1
-kind: Component
-metadata:
-  name: website
-  title: IKKI League Website
-  description: The IKKI League Website
-  annotations:
-    backstage.io/techdocs-ref: dir:.
-    backstage.io/managed-by-location: url:https://gitlab.com/ikki-league/website/-/blob/main/catalog-info.yaml
-  links:
-    - url: https://ikki.fr
-      title: IKKI League
-spec:
-  type: website
-  lifecycle: production
-  owner: ikki-league
-  system: communication-tools
+
