@@ -12,7 +12,7 @@ spec:
     displayName: IKKI League
     email: ikki@ikki-league.com
     picture: https://avatars.dicebear.com/api/identicon/info@example.com.svg?background=%23fff&margin=25
-  children: [squad-athena, squad-venus]
+  children: [team-tech, team-fonc]
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Location
@@ -21,5 +21,5 @@ metadata:
   description: A collection of all Backstage IKKI Groups
 spec:
   targets:
-    - ./squad-athena-group.yaml
-    - ./squad-venus-group.yaml
+    - ./team-tech-group.yaml
+    - ./team-fonc-group.yaml
