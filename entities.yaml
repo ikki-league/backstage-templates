@@ -19,6 +19,6 @@ metadata:
       title: IKKI League
 spec:
   type: website
-  lifecycle: experimental
+  lifecycle: production
   owner: ikki-league
   system: communication-tools
