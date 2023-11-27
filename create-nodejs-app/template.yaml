@@ -1,11 +1,10 @@
 apiVersion: scaffolder.backstage.io/v1beta3
-# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-template
 kind: Template
 metadata:
   name: create-nodejs-app-template
   title: Node.js Template
   description: Create a new NodeJS App
-    tags:
+  tags:
     - nodejs
     - com
 spec:
@@ -35,7 +34,6 @@ spec:
           ui:options:
             allowedKinds:
               - Group
-        
     - title: Choose a location
       required:
         - repoUrl
