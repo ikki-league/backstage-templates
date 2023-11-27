@@ -15,7 +15,8 @@ metadata:
   title: IKKI League Website
   description: The IKKI League Website
   annotations:
-    backstage.io/techdocs-ref
+    backstage.io/techdocs-ref: dir:.
+    backstage.io/managed-by-location: url:https://gitlab.com/ikki-league/website/-/blob/main/catalog-info.yaml
   links:
     - url: https://ikki.fr
       title: IKKI League
