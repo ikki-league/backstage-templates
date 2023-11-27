@@ -14,6 +14,8 @@ metadata:
   name: website
   title: IKKI League Website
   description: The IKKI League Website
+  annotations:
+    backstage.io/techdocs-ref
   links:
     - url: https://ikki.fr
       title: IKKI League
