@@ -1,0 +1,69 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: team-tech
+  description: Squad Venus
+spec:
+  type: team
+  profile:
+    # Intentional no displayName for testing
+    email: everybody@ikki.fr
+    picture: https://avatars.dicebear.com/api/identicon/team-a@example.com.svg?background=%23fff&margin=25
+  parent: ikki-league
+  children: []
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: ludovic.blaas
+spec:
+  profile:
+    # Intentional no displayName for testing
+    email: lblaas@ikki.fr
+    picture: https://avatars.dicebear.com/api/avataaars/breanna-davison@example.com.svg?background=%23fff
+  memberOf: [team-tech]
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: fabien.travaglia
+spec:
+  profile:
+    # Intentional no displayName for testing
+    email: ftravaglia@ikki.fr
+    picture: https://www.ikki.fr/_next/image?url=%2Ffab.png&w=384&q=75?background=%23fff
+  memberOf: [team-tech]
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-user
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: Julien.rey
+spec:
+  profile:
+    # Intentional no displayName for testing
+    email: jrey@ikki.fr
+    picture: https://avatars.dicebear.com/api/avataaars/breanna-davison@example.com.svg?background=%23fff
+  memberOf: [team-tech]
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: mickael.akbaraly
+spec:
+  profile:
+    # Intentional no displayName for testing
+    email: makbaraly@ikki.fr
+    picture: https://avatars.dicebear.com/api/avataaars/breanna-davison@example.com.svg?background=%23fff
+  memberOf: [team-tech]
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: issam.abdelkader
+spec:
+  profile:
+    # Intentional no displayName for testing
+    email: iabdelkader@ikki.fr
+    picture: https://avatars.dicebear.com/api/avataaars/breanna-davison@example.com.svg?background=%23fff
+  memberOf: [team-tech]
