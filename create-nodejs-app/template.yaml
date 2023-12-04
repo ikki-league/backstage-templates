@@ -26,7 +26,7 @@ spec:
           ui:autofocus: true
           ui:options:
             rows: 5
-          owner:
+        owner:
           title: Owner
           type: string
           description: Owner of the component
