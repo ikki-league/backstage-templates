@@ -7,3 +7,10 @@ metadata:
 spec:
   owner: ikki-league
 
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: internal-tools
+spec:
+  owner: ikki-league
