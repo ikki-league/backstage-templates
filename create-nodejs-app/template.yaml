@@ -42,6 +42,7 @@ spec:
           ui:options:
             catalogFilter:
               - kind: Component
+            defaultNamespace: ""
     - title: Choose a location
       required:
         - repoUrl
