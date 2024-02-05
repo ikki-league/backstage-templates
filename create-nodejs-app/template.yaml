@@ -41,7 +41,7 @@ spec:
           ui:field: MultiEntityPicker
           ui:options:
             catalogFilter:
-              - kind: Component       
+              kind: Component       
     - title: Choose a location
       required:
         - repoUrl
