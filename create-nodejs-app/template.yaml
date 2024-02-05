@@ -40,8 +40,8 @@ spec:
           description: Components this item depends on
           ui:field: MultiEntityPicker
           ui:options:
-          catalogFilter:
-            - kind: Component       
+            catalogFilter:
+              - kind: Component       
     - title: Choose a location
       required:
         - repoUrl
