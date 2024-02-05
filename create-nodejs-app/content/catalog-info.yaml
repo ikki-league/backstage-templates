@@ -10,4 +10,4 @@ spec:
   owner: user:guest
   lifecycle: experimental
   dependsOn:
-    - ${{ values.dependencies }}
+    - ${{ values.dependencies | dump }}
