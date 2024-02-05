@@ -36,12 +36,12 @@ spec:
               - Group
         dependencies:
           title: Dependencies
-          type: array
+          type: string
           description: Components this item depends on
-          ui:field: MultiEntityPicker
+          ui:field: EntityPicker
           ui:options:
             catalogFilter:
-              kind: Component       
+              - kind: Component
     - title: Choose a location
       required:
         - repoUrl
