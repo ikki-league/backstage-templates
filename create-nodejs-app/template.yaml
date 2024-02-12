@@ -40,12 +40,10 @@ spec:
           items:
             type: string
           description: Components this item depends on
-          ui:field: MultiEntityPicker
+          ui:field: EntityPicker
           ui:options:
-            allowArbitraryValues: false
             catalogFilter:
               - kind: Component
-            defaultNamespace: ""
     - title: Choose a location
       required:
         - repoUrl
