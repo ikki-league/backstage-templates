@@ -42,6 +42,7 @@ spec:
           description: Components this item depends on
           ui:field: MultiEntityPicker
           ui:options:
+            allowArbitraryValues: false
             catalogFilter:
               - kind: Component
             defaultNamespace: ""
