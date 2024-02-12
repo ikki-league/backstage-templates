@@ -65,8 +65,8 @@ spec:
       input:
         url: ./content
         values:
-          - name: ${{ parameters.name }}
-            dependencies : ${{ parameters.dependencies }}
+          name: ${{ parameters.name }}
+          dependencies : ${{ parameters.dependencies }}
 
     # This step publishes the contents of the working directory to GitHub.
     - id: publish
