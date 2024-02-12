@@ -38,9 +38,7 @@ spec:
           title: Dependencies
           type: array
           items:
-            type:
-              catalogFilter:
-              - kind: Component
+            type: string
           description: Components this item depends on
           ui:field: MultiEntityPicker
           ui:options:
