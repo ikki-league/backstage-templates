@@ -34,6 +34,15 @@ spec:
           ui:options:
             allowedKinds:
               - Group
+        dependencies:
+          title: Dependencies
+          type: string
+          description: Components this item depends on
+          ui:field: EntityPicker
+          ui:options:
+            catalogFilter:
+              - kind: Component
+            defaultNamespace: ""
     - title: Choose a location
       required:
         - repoUrl
@@ -56,7 +65,8 @@ spec:
       input:
         url: ./content
         values:
-          name: ${{ parameters.name }}
+          - name: ${{ parameters.name }}
+            dependencies : ${{ parameters.dependencies }}
 
     # This step publishes the contents of the working directory to GitHub.
     - id: publish
