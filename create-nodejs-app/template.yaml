@@ -34,15 +34,6 @@ spec:
           ui:options:
             allowedKinds:
               - Group
-        dependencies:
-          title: Dependencies
-          type: string
-          description: Components this item depends on
-          ui:field: EntityPicker
-          ui:options:
-            catalogFilter:
-              - kind: Component
-            defaultNamespace: ""
     - title: Choose a location
       required:
         - repoUrl
